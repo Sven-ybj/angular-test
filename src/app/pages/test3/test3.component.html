@@ -1,0 +1,74 @@
+<div>
+  <!-- <form nz-form [formGroup]="validateForm" class="ant-advanced-search-form"> -->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="8" *ngFor="let control of inputControlArray" [hidden]="!control.show">
+        <!-- <nz-form-item> -->
+          <nz-form-label nzRequired >Field {{ control.index }}</nz-form-label>
+          <nz-form-control>
+            <input nz-input placeholder="placeholder" />
+          </nz-form-control>
+        <!-- </nz-form-item> -->
+      </div>
+    </div>
+  <!-- </form> -->
+
+  <!-- 日期组件 -->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="8" *ngFor="let control of dateControlArray" [hidden]="!control.show">
+        <!-- <nz-form-item> -->
+          <nz-form-label nzRequired >Field {{ control.index }}</nz-form-label>
+          <nz-form-control>
+            <nz-date-picker nzShowTime ></nz-date-picker>
+          </nz-form-control>
+        <!-- </nz-form-item> -->
+      </div>
+    </div>
+
+  <!-- 级联选择器 -->
+  <!-- <form nz-form [formGroup]="validateForm3" class="ant-advanced-search-form"> -->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="8" *ngFor="let control of cityControlArray" [hidden]="!control.show">
+        <!-- <nz-form-item> -->
+          <nz-form-label nzRequired >Field {{ control.index }}</nz-form-label>
+          <nz-form-control>
+            <nz-cascader [nzOptions]="cityOptions" ></nz-cascader>
+          </nz-form-control>
+        <!-- </nz-form-item> -->
+      </div>
+    </div>
+  <!-- </form> -->
+
+  <!-- 下拉选择日期 -->
+  <!-- <form nz-form [formGroup]="validateForm4" class="ant-advanced-search-form"> -->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="8" *ngFor="let control of selectControlArray" [hidden]="!control.show">
+        <!-- <nz-form-item> -->
+          <nz-form-label nzRequired >Field {{ control.index }}</nz-form-label>
+          <nz-form-control>
+            <nz-select >
+              <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+              <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+              <nz-option nzValue="disabled" nzLabel="Disabled"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        <!-- </nz-form-item> -->
+      </div>
+    </div>
+  <!-- </form> -->
+
+  <!-- switch -->
+  <!-- <form nz-form [formGroup]="validateForm5" class="ant-advanced-search-form"> -->
+    <div nz-row [nzGutter]="24">
+      <div nz-col [nzSpan]="8" *ngFor="let control of switchControlArray" [hidden]="!control.show">
+        <!-- <nz-form-item> -->
+          <nz-form-label nzRequired >Field {{ control.index }}</nz-form-label>
+          <nz-form-control>
+            <nz-switch nzCheckedChildren="开" nzUnCheckedChildren="关" ></nz-switch>
+          </nz-form-control>
+        <!-- </nz-form-item> -->
+      </div>
+    </div>
+  <!-- </form> -->
+
+
+</div>
